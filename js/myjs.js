@@ -10,6 +10,15 @@ ticTacToe.init = function () {
 
 ticTacToe.boxClicked = function(){
    $(this).addClass(ticTacToe.currentPlayer);
+   ticTacToe.playerIndicator.toggleClass("red blue");
+   ticTacToe.currentPlayer = ticTacToe.currentPlayer === "red" ? "blue" : "red";
+
+//    if(ticTacToe.currentPlayer === "red") {
+//     ticTacToe.currentPlayer = "blue";
+//    }
+//    else {
+//        ticTacToe.currentPlayer = "red";
+//    }
 };
 
 $(document).ready(function () {
